@@ -1,0 +1,242 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #374d5c;
+    font-family: 'Raleway', sans-serif;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+progress {
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+::-webkit-progress-bar {
+    background-color: whitesmoke;
+    border-radius: 0.2em;
+    height: 12px;
+}
+
+::-webkit-progress-value {
+    background-color: dodgerblue;
+    border-radius: 0.2em 0 0 0.2em;
+}
+
+table {
+    border-spacing: 0;
+    margin: 30px 0;
+    background-color: #e9ecef;
+    max-width: 1000px;
+}
+
+thead {
+    background-color: #212529;
+    color: white;
+}
+
+td,
+th {
+    text-align: center;
+    padding: 5px 10px;
+    color: black;
+}
+
+thead th,
+thead td {
+    color: white;
+}
+
+table tr:nth-of-type(2n) {
+    background-color: #adb5bd;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000000a7;
+    color: white;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.temp {
+    opacity: 0;
+    ;
+}
+
+.fontsize {
+    font-size: 16px;
+}
+
+.controlx {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.typeHere {
+    flex-grow: 5;
+}
+
+button {
+    flex-grow: 2;
+    box-sizing: border-box;
+}
+
+
+
+
+#meters,
+#metercontainer,
+#metersdiv {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+}
+
+
+#metercontainer {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.content {
+    width: 100%;
+    border: 1px solid black;
+    padding: 1em;
+    /* background-color: rgba(21, 19, 19, 0.721); */
+    box-sizing: border-box;
+    background-color: white;
+}
+
+#metercontainer {
+    color: white;
+    font-size: 20px;
+}
+
+.game {
+    width: 60%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 15px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task {
+    border-style: none;
+    color: black;
+    margin: 10px 0;
+    background-color: white;
+    padding: 5px;
+    font-size: 28px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+    margin: 20px 0;
+    color: whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 8px;
+    font-family: 'Ubuntu';
+}
+
+
+button {
+    border-style: none;
+}
+
+label,
+.span {
+    color: rgb(173, 172, 172);
+}
+
+.currentSpan {
+    background-color: rgb(173, 172, 172);
+    height: 100%;
+}
+
+.wrong {
+    color: crimson;
+}
+
+input {
+    border: none;
+    resize: none;
+    outline: none;
+    background-color: #ced4da;
+    padding: 5px 15px;
+    font-size: 24px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.controls {
+    background-color: #669bbc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    padding: 5px 12px;
+    transition: 0.2s;
+    height: 50px;
+}
+
+.personal {
+    color: white;
+}
+
+.controls:hover {
+    background-color: hsl(203, 38%, 53%);
+}
+
+
+.plain {
+    font-weight: 200;
+}
+
+.ksw,
+.ww {
+    color: crimson;
+    font-weight: 400;
+}
+
+.navigation {
+    color: white;
+}
+
+
+.bg-wrong {
+    background-color: crimson;
+}
+
+.ksr,
+.cw {
+    color: #2ec4b6;
+    font-weight: 400;
+}
+
+.accperc {
+    font-weight: 700;
+}
+
+@media screen and (max-width:700px) {
+    .typeHere {
+        display: block;
+        width: 100%;
+    }
+
+    .controls {
+        width: 40%;
+    }
+}

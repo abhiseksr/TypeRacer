@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="keyboard.png">
+    <link
+        href='https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@300;400;700&display=swap'
+        rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>TypeRacer</title>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="game">
+        <div id="metersdiv">
+            <ul id="meters">
+            </ul>
+        </div>
+        <div class="content">
+            <div name="task" id="task" class="task">
+            </div>
+            <div class="controlx">
+                <input autofocus class="typeHere" placeholder="Mobile devices not supported">
+                <button class="restart controls">New Game</button>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./index.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
