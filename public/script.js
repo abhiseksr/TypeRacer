@@ -24,8 +24,9 @@ function run() {
         // })
         // console.log(data.timm);
         // console.log(set);
+        document.querySelector(".count").innerHTML = data.counts;
         if (!gameOver)
-            document.querySelector(".overlay").innerHTML = data.countdown;
+            document.querySelector(".countdown").innerHTML = data.countdown;
         meter.setAttribute("min", 0);
         // progresscontainer.setAttribute("class","progress-container");
         meter.setAttribute("max", 100);
@@ -79,11 +80,11 @@ function run() {
         // console.log(list);
         if (gameOver) {
             pause = 1;
-            // const overlay = document.querySelector(".overlay");               
+            // const countdown = document.querySelector(".countdown");               
             document.querySelector(".overlay").classList.remove("temp");
             document.querySelector(".overlay").classList.add("fontsize");
             document.querySelector(".overlay").innerHTML = getResultHTML(list);
-            // console.log(overlay.innerHTML);
+            // console.log(countdown.innerHTML);
         }
     })
 

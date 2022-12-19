@@ -72,7 +72,7 @@ function insertWords() {
     pointerToTaskText = 0;
     taskText = [];
     for (let idx = pointerToListWords; 1; idx++) {
-        if (idx >= maxWords || listWords[idx].length + cnt > 75) break;
+        if (idx >= maxWords || listWords[idx].length + cnt > 90) break;
         taskText.push(listWords[idx]);
         const word = document.createElement('span');
         word.classList.add(`word${idx}`);

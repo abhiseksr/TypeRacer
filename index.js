@@ -44,6 +44,7 @@ io.on("connection", function (socket) {
         if (roomsobj[k].countdown > 0) return true;
         return false;
     })
+    let clientsCount = io.engine.clientsCount;
     socket.join(room);
     // console.log("connection established")
     // let people = (io.sockets.connected);
@@ -71,7 +72,7 @@ io.on("connection", function (socket) {
         elapsed = Math.min(elapsed, 10);
         roomsobj[rm].countdown = 10 - elapsed;
         if (roomsobj[rm].flag && roomsobj[rm].countdown == 0) roomsobj[rm].flag = 0, io.to(rm).emit("start");
-        io.to(rm).emit("update", { user: socket.handshake.query.user, val: data.value, id: socket.id, countdown: roomsobj[rm].countdown, timer: data.timer, correctWords: data.correctWords });
+        io.to(rm).emit("update", {counts:clientsCount, user: socket.handshake.query.user, val: data.value, id: socket.id, countdown: roomsobj[rm].countdown, timer: data.timer, correctWords: data.correctWords });
     })
 
     socket.on("over", data => {
