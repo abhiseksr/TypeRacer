@@ -34,7 +34,7 @@ textArea.innerText = "";
 
 let taskText = [];
 
-let timer = 0, maxWords = 2, value = 0;
+let timer = 0, maxWords = 50, value = 0;
 let pause = 1;
 let gameOver = 0;
 let wrongWords = 0;
@@ -72,7 +72,7 @@ function insertWords() {
     pointerToTaskText = 0;
     taskText = [];
     for (let idx = pointerToListWords; 1; idx++) {
-        if (idx >= maxWords || listWords[idx].length + cnt > 85) break;
+        if (idx >= maxWords || listWords[idx].length + cnt > 75) break;
         taskText.push(listWords[idx]);
         const word = document.createElement('span');
         word.classList.add(`word${idx}`);

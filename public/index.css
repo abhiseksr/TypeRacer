@@ -127,7 +127,7 @@ button {
 }
 
 .game {
-    width: 60%;
+    width: 800px;
     min-height: 100vh;
     box-sizing: border-box;
     padding: 15px 35px;

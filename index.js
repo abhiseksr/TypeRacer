@@ -68,8 +68,8 @@ io.on("connection", function (socket) {
     socket.on("update", function (data) {
         const rm = Array.from(socket.rooms)[1];
         let elapsed = parseInt((Date.now() - roomsobj[rm].start) / 1000);
-        elapsed = Math.min(elapsed, 7);
-        roomsobj[rm].countdown = 7 - elapsed;
+        elapsed = Math.min(elapsed, 10);
+        roomsobj[rm].countdown = 10 - elapsed;
         if (roomsobj[rm].flag && roomsobj[rm].countdown == 0) roomsobj[rm].flag = 0, io.to(rm).emit("start");
         io.to(rm).emit("update", { user: socket.handshake.query.user, val: data.value, id: socket.id, countdown: roomsobj[rm].countdown, timer: data.timer, correctWords: data.correctWords });
     })
