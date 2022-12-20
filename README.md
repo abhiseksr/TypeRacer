@@ -8,7 +8,7 @@ Multiplayer typing race, used socket.io for users statistics communication. User
 3. Server is serving on port number 3000. Open the url http://localhost:3000 in your web browser.
 4. You should be able to see the followings - 
 
-<img width="1440" alt="Screenshot 2022-12-20 at 10 03 01 AM" src="https://user-images.githubusercontent.com/85542595/208585200-0aee01c0-0ae7-48bf-b8eb-0e13ff56168c.png">
+<img width="1440" alt="Screenshot 2022-12-20 at 10 18 38 AM" src="https://user-images.githubusercontent.com/85542595/208586117-2b540dde-44e4-4963-bfaf-e98f998c4b52.png">
 <img width="1440" alt="Screenshot 2022-12-20 at 10 03 14 AM" src="https://user-images.githubusercontent.com/85542595/208585318-b724b687-8761-4992-bd20-6a4ed777213a.png">
 
 5. The timer is set on the server side, and not on the client side. Therefore as countdown becomes zero the race begins. 
