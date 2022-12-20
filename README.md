@@ -2,9 +2,8 @@
 Multiplayer typing race, used socket.io for users statistics communication. Users are automatically alloted vacant room.
 
 1. To run the project on local machine, clone the repositery.
-2. In the outermost directory where index.js located issue the follwing commands - 
-    npm install
-    nodemon index.js
+2. In the outermost directory where index.js located issue the following commands - 
+    npm install, nodemon index.js
 3. Server is serving on port number 3000. Open the url http://localhost:3000 in your web browser.
 4. You should be able to see the followings - 
 
