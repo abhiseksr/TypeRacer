@@ -3,7 +3,7 @@ while (!username)
     username = prompt("Enter your name");
 let socket;
 function run() {
-    socket = io("http://localhost:3000", {
+    socket = io("https://typeracer-d9qi.onrender.com", {
         query: {
             user: username
         }
