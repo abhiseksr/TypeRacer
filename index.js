@@ -2,8 +2,11 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const socketio = require("socket.io");
-const server = app.listen(3000, () => {
-    console.log('Serving on port', 3000);
+
+const PORT = process.env.PORT || 3000;
+
+const server = app.listen(PORT, () => {
+    console.log('Serving on port', PORT);
 });
 
 app.use(express.static(__dirname + "/public"));
