@@ -13,22 +13,23 @@ app.use(express.static(__dirname + "/public"));
 
 const io = socketio(server);
 
+let entryTime = 15;
 let roomsarr = ["room1", "room2", "room3"];
 let roomsobj = {
     "room1": {
-        countdown: 10,
+        countdown: entryTime,
         start: 0,
         list: [],
         flag: 1
     },
     "room2": {
-        countdown: 10,
+        countdown: entryTime,
         start: 0,
         list: [],
         flag: 1
     },
     "room3": {
-        countdown: 10,
+        countdown: entryTime,
         start: 0,
         list: [],
         flag: 1
@@ -41,7 +42,7 @@ io.on("connection", function (socket) {
         // console.log(roomss);
         let ids;
         if (roomss) ids = Array.from(roomss);
-        if (!ids) roomsobj[k].countdown = 10, roomsobj[k].start = 0, roomsobj[k].flag = 1;
+        if (!ids) roomsobj[k].countdown = entryTime, roomsobj[k].start = 0, roomsobj[k].flag = 1;
     })
     const room = Object.keys(roomsobj).find(k => {
         if (roomsobj[k].countdown > 0) return true;
@@ -72,8 +73,8 @@ io.on("connection", function (socket) {
     socket.on("update", function (data) {
         const rm = Array.from(socket.rooms)[1];
         let elapsed = parseInt((Date.now() - roomsobj[rm].start) / 1000);
-        elapsed = Math.min(elapsed, 10);
-        roomsobj[rm].countdown = 10 - elapsed;
+        elapsed = Math.min(elapsed, entryTime);
+        roomsobj[rm].countdown = entryTime - elapsed;
         if (roomsobj[rm].flag && roomsobj[rm].countdown == 0) roomsobj[rm].flag = 0, io.to(rm).emit("start");
         io.to(rm).emit("update", {counts:clientsCount, user: socket.handshake.query.user, val: data.value, id: socket.id, countdown: roomsobj[rm].countdown, timer: data.timer, correctWords: data.correctWords });
     })
