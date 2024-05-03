@@ -2,8 +2,9 @@ let username;
 while (!username)
     username = prompt("Enter your name");
 let socket;
+// https://typeracer-d9qi.onrender.com
 function run() {
-    socket = io("https://typeracer-d9qi.onrender.com", {
+    socket = io("https://typeracer.up.railway.app/", {
         query: {
             user: username
         }
